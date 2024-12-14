@@ -1,0 +1,82 @@
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 2000px; /* Adjust as needed */
+  margin: auto;
+  overflow: hidden; /* Prevents overflow */
+  height: 90vh; /* Set the height to 50% of the viewport height */
+}
+
+.video-container video {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height of the container */
+  object-fit: cover; /* Ensures the video covers the area without distortion */
+}
+
+.overlay {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: -2px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  height: auto;
+  width: 80%; /* Responsive width */
+  max-width: 1000px; /* Optional: max width for larger screens */
+  transform: translate(-10%, -30%); /* Centering adjustment */
+}
+
+.overlay h1 {
+  font-weight: bolder;
+  font-size: 80px;
+}
+
+#features-1 .row {
+  margin-bottom: 50px;
+}
+
+.phone-frame {
+  position: relative;
+  display: inline-block;
+}
+
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 102%;
+  height: 102%;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 40px;
+  }
+  .video-container {
+    height: 70vh;
+  }
+}
+@media (max-width: 576px) {
+  .overlay h1 {
+    font-size: 40px;
+  }
+  .video-container {
+    height: 70vh;
+  }
+  .overlay {
+    left: 10%;
+    top: 30%;
+  }
+  #features-1 .row {
+    margin-bottom: 0px;
+  }
+}
